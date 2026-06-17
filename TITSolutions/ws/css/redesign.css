@@ -1,0 +1,566 @@
+/* ==========================================================================
+   UI/UX PRO MAX - PREMIUM REDESIGN
+   ========================================================================== */
+
+/* 1. Imports */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* 2. Global Variables & Theming */
+:root {
+  --bg-darker: #05080e;
+
+  /* Premium Dark Theme Colors based on Logo */
+  --bg-main: #0d1b2a;
+  --bg-secondary: #1b263b;
+  --bg-glass: rgba(13, 27, 42, 0.75);
+  
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  
+  --accent-primary: #eb902a;
+  --accent-secondary: #ffad52;
+  --gradient-accent: linear-gradient(135deg, #eb902a 0%, #ffad52 100%);
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(255, 107, 107, 0.3);
+  
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+}
+
+/* Light Theme Colors */
+[data-theme="light"] {
+  --bg-main: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* 2.5 Smooth Scroll */
+html {
+  /* scroll-behavior removed */
+}
+
+/* 3. Global Overrides */
+body {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--bg-main) !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.title, .section-title h2, .section-title-w h2, .section-title-l h2 {
+  font-family: 'Outfit', sans-serif !important;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, a {
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+a:hover, a:focus {
+  color: var(--accent-primary) !important;
+}
+
+p {
+  color: var(--text-secondary) !important;
+}
+
+/* 4. Color & Background Overrides */
+.bg-theme, .bg-title, .bg-grey, .bg-lgrey {
+  background: var(--bg-secondary) !important;
+}
+
+/* Override legacy orange with our premium gradient */
+.theme, .text-theme {
+  color: var(--accent-primary) !important;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 5. Glassmorphism Navbar */
+header.main_header_area, .header_menu {
+  background: var(--bg-glass) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-content {
+  background: transparent !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-content .links ul li a {
+  color: var(--text-secondary) !important;
+}
+
+.header-content .links ul li a:hover {
+  color: var(--accent-primary) !important;
+}
+
+.navbar-default {
+  background: transparent !important;
+  border: none !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.active > a {
+  color: var(--accent-primary) !important;
+}
+
+/* 6. Premium Buttons */
+.btn, .nir-btn {
+  background: var(--gradient-accent) !important;
+  color: #fff !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 12px 32px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-md) !important;
+  transition: all var(--transition-normal) !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn:hover, .nir-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow) !important;
+}
+
+.btn::before, .nir-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #FF8E53 0%, #FF6B6B 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--transition-normal);
+}
+
+.btn:hover::before, .nir-btn:hover::before {
+  opacity: 1;
+}
+
+/* 7. Cards & Boxes (Tours, Services, etc.) */
+.trend-item, .destination-item, .box-shadow, .service-item {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden;
+  transition: all var(--transition-normal) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.trend-item:hover, .destination-item:hover, .service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg) !important;
+  border-color: rgba(255, 107, 107, 0.3) !important;
+}
+
+.trend-content, .destination-content {
+  padding: 24px !important;
+}
+
+/* Images inside cards */
+.trend-image img, .destination-image img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.trend-item:hover .trend-image img, .destination-item:hover .destination-image img {
+  transform: scale(1.08);
+}
+
+/* 8. Forms & Inputs */
+input[type=text], input[type=email], input[type=number], 
+input[type=password], input[type=tel], input[type=date], 
+textarea, select {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Inter', sans-serif !important;
+  backdrop-filter: blur(4px);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2) !important;
+}
+
+/* 9. Footer */
+footer {
+  background: #06080D !important;
+  border-top: 1px solid var(--border-color);
+  padding-top: 60px !important;
+}
+
+footer .footer-title {
+  color: var(--text-primary) !important;
+}
+
+footer ul li a {
+  color: var(--text-secondary) !important;
+}
+
+footer ul li a:hover {
+  color: var(--accent-primary) !important;
+  padding-left: 8px;
+}
+
+/* 10. Preloader Overrides */
+#preloader {
+  background-color: var(--bg-main) !important;
+}
+
+/* Overlays */
+.overlay, .dot-overlay, .color-overlay, .white-overlay {
+  background: rgba(11, 15, 25, 0.6) !important;
+}
+
+/* Quick fixes for specific layout elements */
+.border-all, .border-b, .border-t, .border-end {
+  border-color: var(--border-color) !important;
+}
+
+.bg-white {
+  background: var(--bg-secondary) !important;
+}
+
+/* Text Contrast Fixes */
+p, span, li, .black, .grey, .title, .section-title h2 { color: var(--text-secondary) !important; }
+h1, h2, h3, h4, h5, h6, .white { color: var(--text-primary) !important; }
+
+
+
+/* Airplane Preloader */
+#preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-main) !important;
+}
+.airplane-loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.globe-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: var(--accent-primary);
+    opacity: 0.8;
+}
+.plane-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: fly-around 2s linear infinite;
+}
+.plane-icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-size: 24px;
+    color: var(--text-primary);
+}
+@keyframes fly-around {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Force Slider Text to always be white */
+.swiper-content h1, .swiper-content h1 a, .swiper-content h5, .swiper-content p, .swiper-content a { color: #FFFFFF !important; text-shadow: 0 2px 6px rgba(0,0,0,0.8); }
+
+
+/* UI Enhancements: Glass Navbar & Golden Hover */
+.footer-new .social-icons a { transition: all 0.3s ease; }
+.footer-new .social-icons a:hover { background-color: #d4af37 !important; color: #fff !important; transform: scale(1.1); }
+.header_menu { background: rgba(255, 255, 255, 0.15) !important; backdrop-filter: blur(15px) !important; -webkit-backdrop-filter: blur(15px) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); position: absolute; width: 100%; z-index: 999; top: 0; }
+[data-theme="dark"] .header_menu { background: rgba(15, 23, 42, 0.4) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+
+
+
+
+/* Sticky & Smaller Navbar */
+.main_header_area { position: sticky !important; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); background-color: inherit; }
+.navbar-flex { padding-top: 5px !important; padding-bottom: 5px !important; }
+.navbar-brand img { max-height: 50px !important; }
+
+/* ==========================================================================
+   SECTION COLOR POLISH & NAV TABS (Light & Dark Modes)
+   ========================================================================== */
+
+/* --- Dark Mode (Default) --- */
+
+/* Section Color Polish: Alternating Black & Navy Blue */
+
+/* Section 1: About Us (Why Us) - Black Background */
+.about-us.pt-10 {
+  background-color: var(--bg-darker) !important;
+}
+
+/* Section 2: Featured Counter - Navy Background */
+.featured-counter {
+  background-color: var(--bg-main) !important;
+}
+.featured-counter .counter-item {
+  background-color: var(--bg-secondary) !important; /* Contrasting card background */
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+.featured-counter .counter-item .value.theme {
+  color: var(--accent-primary) !important;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.featured-counter .counter-item p {
+  color: var(--text-secondary) !important;
+}
+.featured-counter .section-title h2,
+.featured-counter .section-title p {
+  color: var(--text-primary) !important;
+}
+
+/* Section 3: Trending Section (Top Destinations) - Black Background */
+.trending {
+  background-color: var(--bg-darker) !important;
+}
+
+/* Section 4: Welcome to Excellence (Second About Us Section) - Navy Background */
+#about.about-us {
+  background-color: var(--bg-main) !important;
+}
+
+/* Section 5: Contact Us - Black Background */
+#contact.contact-us {
+  background-color: var(--bg-darker) !important;
+}
+#contact.contact-us .contact-info {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Destination Pages / General Page Alternation */
+section.bg-grey, section.bg-lgrey, section.bg-theme {
+  background-color: var(--bg-main) !important; /* Navy */
+}
+
+/* --- Nav Tabs / Tab Buttons in Dark Mode --- */
+.nav-tabs, 
+ul#postsTab1 {
+  background: var(--bg-secondary) !important; /* Slate navy container */
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 6px !important;
+}
+
+/* Inactive Tab Buttons in Dark Mode */
+.nav-tabs .nav-link,
+.nav-tabs button,
+.nav-tabs > li.nav-item button,
+#postsTab1 .nav-link,
+#postsTab1 button {
+  background: var(--bg-main) !important; /* Navy background */
+  color: var(--text-secondary) !important; /* Soft white/slate text */
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  margin: 4px !important;
+  padding: 10px 20px !important;
+  transition: all 0.2s ease;
+}
+
+/* Hover State */
+.nav-tabs .nav-link:hover,
+.nav-tabs button:hover,
+#postsTab1 .nav-link:hover,
+#postsTab1 button:hover {
+  background: var(--accent-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--accent-primary) !important;
+}
+
+/* Active State */
+.nav-tabs .nav-link.active,
+.nav-tabs button.active,
+.nav-tabs > li.nav-item button.active,
+#postsTab1 .nav-link.active,
+#postsTab1 button.active {
+  background: var(--accent-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--accent-primary) !important;
+}
+
+
+/* --- Light Mode ([data-theme="light"]) --- */
+
+/* About Us (Why Us) in Light Mode */
+[data-theme="light"] .about-us.pt-10 {
+  background-color: #FFFFFF !important;
+}
+
+/* Overlays override to display white background correctly */
+[data-theme="light"] .white-overlay {
+  background: transparent !important;
+}
+
+/* Featured Counter Section in Light Mode */
+[data-theme="light"] .featured-counter {
+  background: linear-gradient(135deg, #eb902a 0%, #ffad52 100%) !important; /* Golden gradient background */
+}
+[data-theme="light"] .featured-counter .section-title h2,
+[data-theme="light"] .featured-counter .section-title p,
+[data-theme="light"] .featured-counter .white {
+  color: #FFFFFF !important; /* Force text to be pure white */
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+[data-theme="light"] .featured-counter .counter-item {
+  background-color: #FFFFFF !important; /* Pure white cards */
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+[data-theme="light"] .featured-counter .counter-item .value.theme {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: #eb902a !important; /* Golden numbers on white cards */
+}
+[data-theme="light"] .featured-counter .counter-item p {
+  color: #334155 !important; /* Dark slate text for card labels */
+}
+
+/* Trending Section (Top Destinations) in Light Mode */
+[data-theme="light"] .trending {
+  background-color: #FFFFFF !important;
+}
+
+/* Welcome to Excellence (Second About Us Section) in Light Mode */
+[data-theme="light"] #about.about-us {
+  background-color: #F8FAFC !important; /* Very light grey for section contrast */
+}
+[data-theme="light"] #about.about-us .about-content h2 {
+  color: #0F172A !important;
+}
+[data-theme="light"] #about.about-us .about-content p {
+  color: #334155 !important;
+}
+
+/* Contact Us Section in Light Mode */
+[data-theme="light"] #contact.contact-us {
+  background-color: #FFFFFF !important;
+}
+[data-theme="light"] #contact.contact-us .contact-info {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+[data-theme="light"] #contact.contact-us .contact-info h3,
+[data-theme="light"] #contact.contact-us .contact-info p {
+  color: #334155 !important;
+}
+
+/* --- Nav Tabs in Light Mode --- */
+[data-theme="light"] .nav-tabs,
+[data-theme="light"] ul#postsTab1 {
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+[data-theme="light"] .nav-tabs .nav-link,
+[data-theme="light"] .nav-tabs button,
+[data-theme="light"] #postsTab1 .nav-link,
+[data-theme="light"] #postsTab1 button {
+  background: #ffffff !important;
+  color: #777777 !important;
+  border: 1px solid #f1f1f1 !important;
+  border-radius: 4px !important;
+  margin: 0 !important;
+}
+
+[data-theme="light"] .nav-tabs .nav-link:hover,
+[data-theme="light"] .nav-tabs button:hover,
+[data-theme="light"] #postsTab1 .nav-link:hover,
+[data-theme="light"] #postsTab1 button:hover,
+[data-theme="light"] .nav-tabs .nav-link.active,
+[data-theme="light"] .nav-tabs button.active,
+[data-theme="light"] #postsTab1 .nav-link.active,
+[data-theme="light"] #postsTab1 button.active {
+  background: #eb902a !important;
+  color: #ffffff !important;
+  border-color: #eb902a !important;
+}
+
+
+/* Ensure theme toggle and language dropdown are visible and aligned on mobile */
+@media (max-width: 991px) {
+  .navbar-flex {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+  .register-login {
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: 15px !important;
+    order: 2 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  #slicknav-mobile {
+    order: 3 !important;
+    display: block !important;
+  }
+  .navbar-header {
+    order: 1 !important;
+    display: block !important;
+  }
+  .navbar-collapse1 {
+    display: none !important;
+  }
+}
