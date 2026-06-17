@@ -8,6 +8,10 @@
     {
       "src": "TITSolutions/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "images/**",
+      "use": "@vercel/static"
     }
   ]
 }
