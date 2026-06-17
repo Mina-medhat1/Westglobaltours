@@ -12,6 +12,14 @@
     {
       "src": "images/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "en/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "es/**",
+      "use": "@vercel/static"
     }
   ]
 }
