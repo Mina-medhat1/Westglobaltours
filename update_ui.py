@@ -26,9 +26,9 @@ def process_file(filepath):
 
     # Fix Logo size by adding class or inline style
     # Look for the logo img tag and add inline style if not present
-    html = re.sub(r'(<img src="/images/uploads/west-tours-logo\.png"[^>]*)>', r'\1 style="max-height: 70px; width: auto;" >', html)
+    html = re.sub(r'(<img src="/images/uploads/west-tours-logo\.png"[^>]*)>', r'\1 style="max-height: 90px; width: auto;" >', html)
     # To avoid duplicate styles if run multiple times, just clean up first
-    html = re.sub(r'style="max-height: 70px; width: auto;"\s*style="max-height: 70px; width: auto;"', 'style="max-height: 70px; width: auto;"', html)
+    html = re.sub(r'style="max-height: 90px; width: auto;"\s*style="max-height: 90px; width: auto;"', 'style="max-height: 90px; width: auto;"', html)
 
     if html != original_html:
         with open(filepath, 'w', encoding='utf-8') as f:

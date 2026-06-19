@@ -8173,8 +8173,8 @@ h1, h2, h3, h4, h5, h6, .white { color: var(--text-primary) !important; }
 
 /* Sticky & Smaller Navbar */
 .main_header_area { position: sticky !important; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); background-color: inherit; }
-.navbar-flex { padding-top: 5px !important; padding-bottom: 5px !important; }
-.navbar-brand img { max-height: 50px !important; }
+.navbar-flex { padding-top: 15px !important; padding-bottom: 15px !important; }
+.navbar-brand img { max-height: 95px !important; height: auto !important; }
 
 /* ==========================================================================
    SECTION COLOR POLISH & NAV TABS (Light & Dark Modes)
@@ -8413,5 +8413,90 @@ ul#postsTab1 {
   }
   .navbar-collapse1 {
     display: none !important;
+  }
+}
+
+
+/* Mobile Menu Override (SlickNav) */
+.slicknav_nav {
+  background: #000000 !important; /* Pure Black Background */
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.slicknav_nav ul li {
+  background: #000000 !important; /* Pure Black Background for nested items */
+}
+
+.slicknav_nav a, 
+.slicknav_nav .slicknav_row,
+.slicknav_nav .slicknav_txtnode {
+  color: #ffffff !important; /* White text */
+  background: #000000 !important; /* Black background */
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Hover / Active state on mobile */
+.slicknav_nav a:hover, 
+.slicknav_nav .slicknav_row:hover,
+.slicknav_nav a:active,
+.slicknav_nav .slicknav_row:active,
+.slicknav_nav li.slicknav_open > a,
+.slicknav_nav li.slicknav_open > .slicknav_row,
+.slicknav_nav .slicknav_item a:hover,
+.slicknav_nav .slicknav_item:hover > a {
+  color: #000000 !important; /* Dark text when hovered */
+  background: #ffcc00 !important; /* Yellow background when hovered/active */
+}
+
+/* Arrow in mobile menu dropdown */
+.slicknav_nav .slicknav_arrow {
+  color: #ffffff !important;
+}
+.slicknav_nav a:hover .slicknav_arrow,
+.slicknav_nav .slicknav_row:hover .slicknav_arrow {
+  color: #000000 !important;
+}
+
+/* Toggle Hamburger Button Styling */
+.slicknav_btn {
+  background-color: transparent !important;
+}
+.slicknav_btn.slicknav_open:before, 
+.slicknav_btn.slicknav_collapsed:before {
+  color: #000000 !important; /* Black default color */
+  transition: color 0.3s ease;
+}
+.slicknav_btn:hover:before,
+.slicknav_btn.slicknav_open:before {
+  color: #ffcc00 !important; /* Yellow when clicked/open/hovered */
+}
+
+
+/* Desktop Dropdown Menu Overrides */
+@media (min-width: 992px) {
+  .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu {
+    background: #000000 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+  .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
+    background: #000000 !important;
+  }
+  .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li a {
+    color: #ffffff !important;
+    background: #000000 !important;
+  }
+  .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li a:hover,
+  .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li.active > a,
+  .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li a:focus {
+    background: var(--accent-primary) !important;
+    color: #000000 !important;
+  }
+  /* Nested dropdown menus (like Egypt/Dubai submenus) */
+  .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li.submenu .dropdown-menu {
+    background: #000000 !important;
   }
 }
