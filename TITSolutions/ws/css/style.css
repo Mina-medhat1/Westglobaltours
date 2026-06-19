@@ -8217,7 +8217,7 @@ h1, h2, h3, h4, h5, h6, .white { color: var(--text-primary) !important; }
   background-color: var(--bg-darker) !important;
 }
 
-/* Section 4: Welcome to Excellence (Second About Us Section) - Navy Background */
+/* Section 4: Welcome to West Tours (Second About Us Section) - Navy Background */
 #about.about-us {
   background-color: var(--bg-main) !important;
 }
@@ -8326,7 +8326,7 @@ ul#postsTab1 {
   background-color: #FFFFFF !important;
 }
 
-/* Welcome to Excellence (Second About Us Section) in Light Mode */
+/* Welcome to West Tours (Second About Us Section) in Light Mode */
 [data-theme="light"] #about.about-us {
   background-color: #F8FAFC !important; /* Very light grey for section contrast */
 }

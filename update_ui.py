@@ -11,7 +11,7 @@ def process_file(filepath):
     original_html = html
 
     # Update Footer Email
-    html = html.replace('info@excellenttours.com', 'Westglobaltours.info@gmail.com')
+    html = html.replace('info@westglobaltours.com', 'Westglobaltours.info@gmail.com')
     
     # Update Facebook link
     # Find the facebook icon link and replace its href

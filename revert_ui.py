@@ -61,7 +61,7 @@ old_sections = '''
 
                     <div class="text-muted">
 
-<p style='text-align:justify;'    >For over 25 years, Excellent Tours has been dedicated to delivering inspiring travel experiences across the globe. We combine deep industry expertise with a passion for discovery, offering personalized journeys that connect travelers with the culture, beauty, and spirit of every destination.</p>
+<p style='text-align:justify;'    >For over 25 years, West Tours has been dedicated to delivering inspiring travel experiences across the globe. We combine deep industry expertise with a passion for discovery, offering personalized journeys that connect travelers with the culture, beauty, and spirit of every destination.</p>
 
 <p style='text-align:justify;'    >Our commitment to excellence drives everything we do—from crafting seamless itineraries to providing outstanding support for our partners and clients. Whether you're seeking unforgettable adventures or reliable travel solutions, we ensure every journey is designed with care, precision, and a touch of inspiration.</p>
   

@@ -46,7 +46,7 @@ new_footer = '''
                 <ul style="list-style: none; padding: 0;">
                     <li style="margin-bottom: 15px; color: #0f172a; font-size: 14px; display: flex; align-items: flex-start;">
                         <i class="fa fa-envelope" style="color: #64748b; margin-right: 15px; margin-top: 4px;"></i> 
-                        <a href="mailto:info@excellenttours.com" style="color: #0f172a; text-decoration: none;">info@excellenttours.com</a>
+                        <a href="mailto:info@westglobaltours.com" style="color: #0f172a; text-decoration: none;">info@westglobaltours.com</a>
                     </li>
                     <li style="margin-bottom: 15px; color: #0f172a; font-size: 14px; display: flex; align-items: flex-start;">
                         <i class="fa fa-phone" style="color: #64748b; margin-right: 15px; margin-top: 4px;"></i> 

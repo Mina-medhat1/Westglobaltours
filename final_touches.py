@@ -11,10 +11,10 @@ def process_file(filepath):
     original_html = html
 
     # 1. Update Title and Meta Tags
-    html = re.sub(r'<title>(.*?)</title>', lambda m: f"<title>{m.group(1).replace('Excellent Tours', 'West Tours')}</title>", html)
-    html = re.sub(r'<meta property="og:title" content="(.*?)"', lambda m: f'<meta property="og:title" content="{m.group(1).replace("Excellent Tours", "West Tours")}"', html)
-    html = re.sub(r'<meta property="og:site_name" content="(.*?)"', lambda m: f'<meta property="og:site_name" content="{m.group(1).replace("Excellent Tours", "West Tours")}"', html)
-    html = re.sub(r'<meta name="twitter:title" content="(.*?)"', lambda m: f'<meta name="twitter:title" content="{m.group(1).replace("Excellent Tours", "West Tours")}"', html)
+    html = re.sub(r'<title>(.*?)</title>', lambda m: f"<title>{m.group(1).replace('West Tours', 'West Tours')}</title>", html)
+    html = re.sub(r'<meta property="og:title" content="(.*?)"', lambda m: f'<meta property="og:title" content="{m.group(1).replace("West Tours", "West Tours")}"', html)
+    html = re.sub(r'<meta property="og:site_name" content="(.*?)"', lambda m: f'<meta property="og:site_name" content="{m.group(1).replace("West Tours", "West Tours")}"', html)
+    html = re.sub(r'<meta name="twitter:title" content="(.*?)"', lambda m: f'<meta name="twitter:title" content="{m.group(1).replace("West Tours", "West Tours")}"', html)
 
     # 2. Update Favicon
     html = re.sub(r'<link rel="shortcut icon" href="/images/favicon.png">', '<link rel="shortcut icon" href="/images/uploads/logo1.png">', html)

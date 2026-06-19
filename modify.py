@@ -4,7 +4,7 @@ with open('index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
 # 1. Remove Email from header
-html = re.sub(r'<li>\s*<a href=\"mailto:info@excellenttours\.com\".*?</a>\s*</li>', '', html, flags=re.DOTALL)
+html = re.sub(r'<li>\s*<a href=\"mailto:info@westtours\.com\".*?</a>\s*</li>', '', html, flags=re.DOTALL)
 
 # 2. Update Navbar Links
 html = re.sub(r'<li[^>]*>\s*<a href=\"/en/\">Home</a>\s*</li>', '<li class=\"active\"><a href=\"#home\">Home</a></li>', html)
@@ -29,8 +29,8 @@ about_html = '''
             <div class="row d-flex align-items-center justify-content-between">
                 <div class="col-lg-6 ps-4">
                     <div class="about-content text-lg-start">
-                        <h4 class="theme d-inline-block mb-0">Excellent Tours</h4>
-                        <h2 class="border-b mb-2 pb-1">Welcome to Excellence</h2>
+                        <h4 class="theme d-inline-block mb-0">West Tours</h4>
+                        <h2 class="border-b mb-2 pb-1">Welcome to West Tours</h2>
                         <p class="mb-1 pb-2" style="text-align:justify;">
                             The pages that follow are the result of a constant commitment—day after day—to continuous improvement, a clear vision, and comprehensive services. 
                             They are built upon a solid foundation: a highly qualified and motivated team of professionals, ready to respond wherever, whenever, and however required. 
@@ -71,7 +71,7 @@ contact_html = '''
                 <div class="contact-info bg-white p-4 box-shadow rounded">
                     <h3 class="mb-3">Reach Us</h3>
                     <p><i class="fa fa-phone theme me-2"></i> +2 02 33776552</p>
-                    <p><i class="fa fa-envelope theme me-2"></i> info@excellenttours.com</p>
+                    <p><i class="fa fa-envelope theme me-2"></i> info@westglobaltours.com</p>
                     <a href="https://wa.me/20233776552" class="nir-btn mt-3" style="width: 100%; text-align: center;">Chat on WhatsApp</a>
                 </div>
             </div>

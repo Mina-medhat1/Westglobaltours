@@ -12,7 +12,7 @@ def process_file(filepath):
     original_html = html
 
     # 1. Remove Email from header
-    html = re.sub(r'<li>\s*<a href=\"mailto:info@excellenttours\.com\".*?</a>\s*</li>', '', html, flags=re.DOTALL)
+    html = re.sub(r'<li>\s*<a href=\"mailto:info@westtours\.com\".*?</a>\s*</li>', '', html, flags=re.DOTALL)
 
     # 2. Update Navbar Links to hash links since it's an SPA (well, actually, if they are on another page, they should go to /en/#about. But the root index redirects to /en/. So "/en/#about" is safer).
     html = re.sub(r'<li[^>]*>\s*<a href=\"/en/\">Home</a>\s*</li>', '<li class=\"active\"><a href=\"/en/#home\">Home</a></li>', html)

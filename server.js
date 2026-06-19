@@ -81,7 +81,7 @@ app.use((req, res) => {
 
 app.listen(PORT, () => {
     console.log(`==================================================`);
-    console.log(`  Excellent Tours Clone is running locally!`);
+    console.log(`  West Tours Clone is running locally!`);
     console.log(`  Access the site at: http://localhost:${PORT}/`);
     console.log(`  Press Ctrl+C to stop the server.`);
     console.log(`==================================================`);

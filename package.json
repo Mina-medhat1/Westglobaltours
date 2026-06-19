@@ -1,7 +1,7 @@
 {
-  "name": "excellent-tours-clone",
+  "name": "west tours-tours-clone",
   "version": "1.0.0",
-  "description": "Local server for Excellent Tours cloned website",
+  "description": "Local server for West Tours cloned website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
