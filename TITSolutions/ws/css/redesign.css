@@ -322,8 +322,8 @@ h1, h2, h3, h4, h5, h6, .white { color: var(--text-primary) !important; }
 
 /* Sticky & Smaller Navbar */
 .main_header_area { position: sticky !important; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); background-color: inherit; }
-.navbar-flex { padding-top: 15px !important; padding-bottom: 15px !important; }
-.navbar-brand img { max-height: 95px !important; height: auto !important; }
+.navbar-flex { padding-top: 6px !important; padding-bottom: 6px !important; }
+.navbar-brand img { max-height: 60px !important; height: auto !important; }
 
 /* ==========================================================================
    SECTION COLOR POLISH & NAV TABS (Light & Dark Modes)
