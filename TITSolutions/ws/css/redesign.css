@@ -614,12 +614,12 @@ ul#postsTab1 {
 }
 .slicknav_btn.slicknav_open:before, 
 .slicknav_btn.slicknav_collapsed:before {
-  color: var(--text-primary) !important; /* Adaptive color for light/dark theme visibility */
+  color: #000000 !important; /* Black default color */
   transition: color 0.3s ease;
 }
 .slicknav_btn:hover:before,
 .slicknav_btn.slicknav_open:before {
-  color: var(--accent-primary) !important; /* Premium gold hover */
+  color: #ffcc00 !important; /* Yellow when clicked/open/hovered */
 }
 
 
@@ -648,132 +648,4 @@ ul#postsTab1 {
   .header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li.submenu .dropdown-menu {
     background: #000000 !important;
   }
-}
-
-/* ==========================================================================
-   DROPDOWN MENU THEME COMPATIBILITY & ABOUT US IMAGE POLISH
-   ========================================================================== */
-
-/* Universal Dropdown Styling (Theme Adaptive) */
-.dropdown-menu {
-  background-color: var(--bg-secondary) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: var(--radius-md) !important;
-  box-shadow: var(--shadow-lg) !important;
-  padding: 8px 0 !important;
-}
-
-.dropdown-item, .dropdown-menu li a {
-  color: var(--text-primary) !important;
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 500 !important;
-  padding: 8px 20px !important;
-  transition: all var(--transition-fast) !important;
-  display: block;
-  text-decoration: none;
-}
-
-.dropdown-item:hover, .dropdown-item:focus, .dropdown-menu li a:hover {
-  background-color: var(--accent-primary) !important;
-  color: #000000 !important;
-  padding-left: 24px !important;
-}
-
-/* Specific fix for language switcher dropdown */
-.register-login .dropdown-menu {
-  min-width: 130px !important;
-}
-
-.register-login .dropdown-item {
-  font-size: 14px !important;
-}
-
-/* Floating Badges & Animations around About Us Showcase Images */
-.about-image {
-  position: relative;
-  z-index: 5;
-  padding: 20px;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--transition-normal);
-  border: 1px solid var(--border-color);
-}
-
-.about-image:hover img {
-  transform: scale(1.015);
-}
-
-.floating-badge {
-  position: absolute;
-  z-index: 10;
-  display: flex !important;
-  align-items: center;
-  background: var(--bg-glass) !important;
-  border: 1px solid var(--border-color) !important;
-  box-shadow: var(--shadow-md) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  max-width: 220px;
-  animation: badge-float 6s ease-in-out infinite;
-}
-
-.badge-top-left {
-  top: 15%;
-  left: -15px;
-}
-
-.badge-bottom-right {
-  bottom: 15%;
-  right: -15px;
-  animation-delay: 3s;
-}
-
-.badge-icon-wrap {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--accent-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.badge-icon-wrap i {
-  font-size: 16px;
-}
-
-.floating-decor {
-  z-index: 4;
-}
-
-.decor-1 {
-  top: -5px;
-  right: 12%;
-  animation: decor-float 8s ease-in-out infinite;
-}
-
-.decor-2 {
-  bottom: -5px;
-  left: 12%;
-  animation: decor-float-delayed 8s ease-in-out infinite;
-}
-
-/* Animations */
-@keyframes badge-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes decor-float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-6px) rotate(15deg); }
-}
-
-@keyframes decor-float-delayed {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(6px) rotate(-15deg); }
 }
